@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <form action="" method="post">
+        <label for="base">Base</label>
+        <input type="number" name="base" id="base">
+        <label for="expoente">Expoente</label>
+        <input type="number" name="expoente" id="expoente">
+        <button type="button" id="calcular">Calcular</button>
+    </form>
+
+    <h1>Resultado</h1>
+    <div id="resultado">
+
+    </div>
+    <script src="./script.js"></script>
 </body>
+
 </html>
+
+<!-- Crie um novo projeto com uma página que tenha 2 campos de texto com os seguintes rótulos: base e expoente, e 1 botão com
+o rótulo "Calcular". Para essa questão, crie um ouvinte de evento no referido botão que busca os valores digitados e
+realiza uma chamada para uma função calcularPotencia(base, expoente) que você irá implementar usando arrow function e
+que invoca a função Math.pow() e mostra o número gerado para o usuário em uma <div>. -->
