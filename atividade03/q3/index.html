@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="">
+        <label for="descricao">Descrição: </label>
+        <input type="text" name="descricao" id="descricao">
+        <label for="valor">Valor: </label>
+        <input type="number" name="valor" id="valor">
+        <input type="button" value="Adicionar" id="botao">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Valor (R$)</th>
+            </tr>
+        </thead>
+        <tbody id="listTransacoes"> 
+            <tr>
+                
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total:</th>
+                <td id="total">0.00</td>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="./script.js"></script>
+</body>
+</html>
