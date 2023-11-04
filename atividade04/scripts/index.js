@@ -8,6 +8,8 @@ let botaoAdicionar = document.querySelector("#botao_adicionar");
 let listaProdutos = document.querySelector("#lista_produtos");
 
 function renderizarElementos() {
+  listaProdutos.textContent = "";
+
   let arrayObjetos = listar();
 
   arrayObjetos.forEach((element, index) => {
@@ -36,13 +38,18 @@ function renderizarElementos() {
     let botao = document.createElement("button");
     botao.textContent = "Remover";
     botao.className = "btn btn-primary";
-    botao.id = "botaoRemover";
+    botao.id = "botaoRemover_" + index;
 
     elementoAcoes.appendChild(botao);
 
     elementoTr.appendChild(elementoAcoes);
 
     listaProdutos.appendChild(elementoTr);
+
+    document.getElementById("botaoRemover_" + index).addEventListener("click", () => {
+      remover(index);
+      renderizarElementos();
+    });
   });
 }
 
