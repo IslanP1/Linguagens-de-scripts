@@ -14,3 +14,5 @@ botaoAdicionar.addEventListener("click", () => {
     status: statusComprado.checked,
   });
 });
+
+listar();
