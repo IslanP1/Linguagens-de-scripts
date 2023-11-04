@@ -27,6 +27,7 @@ function renderizarElementos() {
     let checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = element.status;
+    checkbox.id = "statusCheck_" + index;
 
     elementoComprado.appendChild(checkbox);
 
@@ -50,6 +51,11 @@ function renderizarElementos() {
       remover(index);
       renderizarElementos();
     });
+
+    document.getElementById("statusCheck_" + index).addEventListener("change", (event) => {
+      (event.target.checked) ? marcar(index) : desmarcar(index);
+      renderizarElementos();
+    })
   });
 }
 

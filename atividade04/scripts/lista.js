@@ -20,9 +20,15 @@ function remover(item) {
   localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
 }
 
-function marcar(item) {}
+function marcar(item) {
+  arrayObjetos[item].status = true;
+  localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
+}
 
-function desmarcar(item) {}
+function desmarcar(item) {
+  arrayObjetos[item].status = false;
+  localStorage.setItem("arrayObjetos", JSON.stringify(arrayObjetos));
+}
 
 function listar() {
   return arrayObjetos;
