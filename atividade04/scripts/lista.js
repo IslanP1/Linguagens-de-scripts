@@ -6,7 +6,6 @@ const arrayObjetos = JSON.parse(localStorage.getItem("arrayObjetos")) || [];
 
 function adicionar(item) {
   if (
-    item.codigo_barras !== "" &&
     item.nome_item !== "" &&
     item.preco_item !== ""
   ) {
@@ -34,4 +33,15 @@ function listar() {
   return arrayObjetos;
 }
 
-export { adicionar, remover, marcar, desmarcar, listar };
+function gerarCodigoBarras() {
+  let codigoBarras = "";
+
+  for (let k = 0; k < 13; k++) {
+    let numero = Math.floor(Math.random() * 10);
+    codigoBarras += numero;
+  }
+
+  return codigoBarras;
+}
+
+export { adicionar, remover, marcar, desmarcar, listar, gerarCodigoBarras };
